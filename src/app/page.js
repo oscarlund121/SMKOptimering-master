@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getEvents, getSingleArtwork } from "@/api/page";
 import EventHero from "../app/components/EventHero";
 import Button from "../app/components/Button";
+
 import {
   Carousel,
   CarouselContent,
@@ -12,13 +13,13 @@ import {
 import Hero from "./components/Hero";
 import Header from "./components/layout/Header";
 
-export const revalidate = 7;
+
 export default async function Home() {
+ 
   const allEvents = await getEvents();
   const sliderEvents = allEvents
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
-
     console.log(allEvents)
 
   const heroEvents = await Promise.all(

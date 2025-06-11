@@ -12,6 +12,7 @@ import {
 import Hero from "./components/Hero";
 import Header from "./components/layout/Header";
 
+export const revalidate = 7;
 export default async function Home() {
   const allEvents = await getEvents();
   const sliderEvents = allEvents

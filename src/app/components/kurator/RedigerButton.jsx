@@ -15,7 +15,7 @@ const RedigerButton = ({ event }) => {
     >
       <Button
         onClick={() => (window.location.href = `/secret/${event.id}`)}
-        variant="primary"
+        variant="third"
       >
         Rediger event
       </Button>

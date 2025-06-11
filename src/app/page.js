@@ -15,7 +15,6 @@ import Header from "./components/layout/Header";
 
 
 export default async function Home() {
- 
   const allEvents = await getEvents();
   const sliderEvents = allEvents
     .sort((a, b) => new Date(b.date) - new Date(a.date))

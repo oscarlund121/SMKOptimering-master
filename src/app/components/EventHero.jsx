@@ -4,10 +4,9 @@ import Link from "next/link";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
 
-export const revalidate = 1;
+
 const EventHero = ({ event, heroImage, eventButton = false }) => {
-  const router = useRouter();
-  router.refresh();
+
   return (
     <section className="w-full text-kurator-primary px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-screen-xl mx-auto">

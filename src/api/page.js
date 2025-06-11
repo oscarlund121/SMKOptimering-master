@@ -2,7 +2,10 @@
 
 export async function getEvents() {
 
-  const res = await fetch("https://eksamenso.onrender.com/events")
+  const res = await fetch("https://eksamenso.onrender.com/events", {
+    cache: "no-store", // <-- ingen cache, altid frisk data
+  })
+
   const data = await res.json();
   return data;
 

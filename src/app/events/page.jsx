@@ -13,12 +13,19 @@ const allLocations = {
   1: "København",
   2: "Aarhus",
   3: "Odense",
+  4: "København K",
+  5: "Aalborg",
+  6: "Esbjerg",
+  7: "Køge",
+  8: "Silkeborg",
+  9: "Lyngby",
+  10: "Holstebro",
 };
 
 export default async function EventPage() {
  
   const allEvents = await getEvents();
-  const eventGroups = { 1: [], 2: [], 3: [] };
+  const eventGroups = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] };
 
   allEvents.forEach((event) => {
     if (eventGroups[event.locationId]) {

@@ -8,8 +8,6 @@ export async function getEvents() {
 
 }
 
-
-
 export async function getSearchResults(query) {
   const res = await fetch(`https://api.smk.dk/api/v1/art/search?keys=${query}`);
   const data = await res.json();

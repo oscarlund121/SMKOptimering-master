@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+
+@layer base {
+  :root {
+    --font-sans: "Inter", sans-serif;
+
+    --color-kurator-bg: #cfcec5;
+    --color-kurator-primary: #102e50;
+    --color-kurator-text-secondary: #7d7d99;
+
+    --color-public-bg: #dadada;
+    --color-public-primary: #14214f;
+    --color-public-text-secondary: #f1362b;
+
+    --bg-public-bg: url("/img/background-art.svg") no-repeat center center fixed;
+
+    --text-xs: clamp(0.64rem, 0.52rem + 0.31vw, 0.8rem);
+    --text-sm: clamp(0.8rem, 0.65rem + 0.4vw, 1rem);
+    --text-base: clamp(1rem, 0.83rem + 0.5vw, 1.25rem);
+    --text-md: clamp(1.25rem, 1.04rem + 0.63vw, 1.56rem);
+    --text-lg: clamp(1.56rem, 1.3rem + 0.78vw, 1.95rem);
+    --text-xl: clamp(1.95rem, 1.63rem + 0.98vw, 2.44rem);
+    --text-2xl: clamp(2.44rem, 2.04rem + 1.22vw, 3.05rem);
+    --text-3xl: clamp(3.05rem, 2.55rem + 1.53vw, 3.81rem);
+
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-loose: 1.8;
+
+    --bg-img: url("/img/pexels-lady.png");
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: white;
+    color: var(--color-public-primary);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+  }
+
+
+  .kurator-pack {
+    background-color: var(--color-kurator-bg);
+    color: var(--color-kurator-primary);
+  }
+
+  .public-pack {
+    background-color: var(--color-public-bg);
+    color: var(--color-public-text-secondary);
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px black;
+    color: white;
+  }
+
+  .text-xs-fluid {
+    font-size: var(--text-xs);
+  }
+
+  .text-sm-fluid {
+    font-size: var(--text-sm);
+  }
+
+  .text-base-fluid {
+    font-size: var(--text-base);
+  }
+
+  .text-md-fluid {
+    font-size: var(--text-md);
+  }
+
+  .text-lg-fluid {
+    font-size: var(--text-lg);
+  }
+
+  .text-xl-fluid {
+    font-size: var(--text-xl);
+  }
+
+  .text-2xl-fluid {
+    font-size: var(--text-2xl);
+  }
+
+  .text-3xl-fluid {
+    font-size: var(--text-3xl);
+  }
+
+  .leading-tight {
+    line-height: var(--leading-tight);
+  }
+
+  .leading-normal {
+    line-height: var(--leading-normal);
+  }
+
+  .leading-loose {
+    line-height: var(--leading-loose);
+  }
+
+  .text-kurator-primary {
+    color: var(--color-kurator-primary);
+  }
+
+  .text-kurator-secondary {
+    color: var(--color-kurator-text-secondary);
+  }
+
+  .bg-kurator-bg {
+    background-color: var(--color-kurator-bg);
+  }
+
+  .bg-kurator-primary {
+    background-color: var(--color-kurator-primary);
+  }
+
+  .border-kurator-primary {
+    border-color: var(--color-kurator-primary);
+  }
+
+  .btn-kurator {
+    background-color: var(--color-kurator-bg);
+    color: var(--color-kurator-primary);
+    border: solid 1px var(--color-kurator-primary);
+  }
+
+  .btn-kurator:hover {
+    background-color: var(--color-kurator-primary);
+    color: var(--color-kurator-bg);
+    border: solid 1px var(--color-kurator-bg);
+  }
+
+  .bg-public {
+    background-color: var(--color-public-bg);
+  }
+
+  .bg-img {
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+  }
+}
